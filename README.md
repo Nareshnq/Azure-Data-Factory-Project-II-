@@ -14,7 +14,6 @@
 - [Setup Guide](#setup-guide)
 - [Incremental Load Strategy](#incremental-load-strategy)
 - [Data Orchestration](#data-orchestration)
-- [Course Timestamps](#course-timestamps)
 - [Contributing](#contributing)
 
 ---
