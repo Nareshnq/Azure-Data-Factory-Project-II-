@@ -92,57 +92,34 @@ This project demonstrates a **real-world Azure Data Engineering workflow** that 
 azure-adf-project2/
 │
 ├── README.md                          # This file
+├── LICENSE
 │
 ├── docs/
-│   ├── architecture.md                # Detailed architecture documentation
 │   ├── incremental_load_strategy.md   # Watermark/timestamp strategy explained
 │   ├── medallion_architecture.md      # Bronze/Silver/Gold layer definitions
 │   └── troubleshooting.md             # Common errors and fixes
 │
 ├── pipelines/
-│   ├── pipeline1_file_migration/
-│   │   ├── README.md                  # Pipeline 1 documentation
-│   │   └── pipeline1_only_bank_txns.json
-│   │
-│   ├── pipeline2_api_migration/
-│   │   ├── README.md                  # Pipeline 2 documentation
-│   │   └── pipeline2_API_Migration.json
-│   │
-│   ├── pipeline3_incremental_load/
-│   │   ├── README.md                  # Pipeline 3 documentation
-│   │   └── pipeline3_Sql_Data_migration_to_ADLS.json
-│   │
-│   └── master_pipeline/
-│       ├── README.md                  # Master pipeline documentation
-│       └── Parent_Pipeline.json
-│
-├── linked_services/
-│   ├── FileSystemLS1.json             # Source: On-prem file system
-│   ├── ADLS_LS.json                   # Destination: Azure Data Lake
-│   └── SqlDatabaseLinkedService.json  # Source: Azure SQL Database
+│   ├── pipeline1_file_migration/      # On-prem → ADLS migration (README)
+│   ├── pipeline2_api_migration/       # GitHub API ingestion (README)
+│   ├── pipeline3_incremental_load/    # Watermark incremental load (README)
+│   └── master_pipeline/               # Orchestration pipeline (README)
 │
 ├── integration_runtimes/
 │   └── self_hosted_ir_setup.md        # Steps to register Self-Hosted IR
 │
-├── datasets/
-│   ├── ds_sql_source.json             # Azure SQL source dataset
-│   ├── Parquet1.json                  # ADLS Parquet sink dataset
-│   └── Json2.json                     # Watermark JSON dataset
-│
 ├── scripts/
 │   └── sql/
 │       ├── create_fact_bookings.sql   # DDL for FactBookings table
-│       ├── insert_sample_data.sql     # Sample data inserts (985 → 1000+ rows)
 │       └── watermark_query.sql        # Watermark SELECT MAX query
 │
 ├── config/
 │   ├── last_load.json                 # Watermark checkpoint file template
 │   └── empty.json                     # Dummy source for watermark copy activity
 │
-└── .github/
-    ├── ISSUE_TEMPLATE/
-    │   └── bug_report.md
-    └── pull_request_template.md
+├── file_1/                            # Source datasets (Excel, CSV, JSON)
+│
+└── files_2/                           # Project PDF report + notes
 ```
 
 ---
