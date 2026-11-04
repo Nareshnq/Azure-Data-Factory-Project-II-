@@ -163,7 +163,7 @@ Loads **only new/updated records** from Azure SQL DB using a **Watermark (Timest
 
 - **Source:** Azure SQL Database (`dbo.FactBookings`, 1000+ rows)
 - **Sink:** ADLS Gen2 — `bronze/` folder in Parquet format
-- **Watermark file:** `monitor/last_load/last_load.json`
+- **Watermark file:** `config/last_load.json` in this repo — the checkpoint template deployed to the `monitor/last_load/` folder in ADLS
 
 **Pipeline Flow:**
 ```
@@ -299,4 +299,8 @@ The **Master Pipeline** uses the `Execute Pipeline` activity to create a **paren
 - Failure in any child triggers Logic Apps alert notification
 
 ---
+
+## 🤝 Contributing
+
+Suggestions and fixes are welcome via issues or pull requests. When changing a pipeline, please update its README under `pipelines/` in the same change so the docs stay in sync with the workflow.
 
